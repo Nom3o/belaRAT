@@ -1,4 +1,4 @@
-// Function to fetch and display location data
+
 async function fetchLocation() {
     try {
         const response = await fetch('http://ip-api.com/json/');
@@ -23,7 +23,7 @@ document.getElementById('webcamButton').addEventListener('click', () => {
     }
 });
 
-// Event listener for microphone access
+
 document.getElementById('microphoneButton').addEventListener('click', () => {
     if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -41,7 +41,7 @@ document.getElementById('microphoneButton').addEventListener('click', () => {
                     }
                 };
 
-// Take snapshot and send to server
+
 document.getElementById('snapshotButton').addEventListener('click', () => {
     const video = document.querySelector('video');
     const canvas = document.createElement('canvas');
@@ -62,7 +62,7 @@ document.getElementById('snapshotButton').addEventListener('click', () => {
 
                 setTimeout(() => {
                     mediaRecorder.stop();
-                }, 5000); // Record for 5 seconds
+                }, 5000); 
             })
             .catch((error) => {
                 console.error('Error accessing microphone:', error);
@@ -70,5 +70,5 @@ document.getElementById('snapshotButton').addEventListener('click', () => {
     }
 });
 
-// Fetch location data on page load
+
 window.onload = fetchLocation;
