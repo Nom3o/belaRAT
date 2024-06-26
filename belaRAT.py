@@ -1,6 +1,6 @@
 from modules import webcam, microphone, location
 
-def banner():
+def print_banner():
     banner = """
 
      __                 __            _______           _        _________  
@@ -12,12 +12,12 @@ def banner():
                                                                         
 
 """
-
+    print(banner)
 
 
 
 if __name__ == "__main__":
-    
+    print_banner()
     webcam.access_webcam()
     microphone.access_microphone()
     loc = location.get_location()
