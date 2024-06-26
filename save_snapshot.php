@@ -1,5 +1,5 @@
 <?php
-// Simple authentication - replace 'username' and 'password' with secure values
+
 $AUTH_USER = 'username';
 $AUTH_PASS = 'password';
 
